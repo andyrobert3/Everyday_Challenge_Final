@@ -27,51 +27,15 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity
-            android:name=".challengelevel2"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challengelevel2"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".challengelevel3"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challengelevel3"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".challengelevel5"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challengelevel5"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".challengelevel4"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challengelevel4"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".challengelevel6"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challengelevel6"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".challengelevel7"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challengelevel7"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".challengelevel8"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challengelevel8"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".challengelevel9"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challengelevel9"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".challengelevel1"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challengelevel1"
-            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".challengelevel1" />
+        <activity android:name=".challengelevel2" />
+        <activity android:name=".challengelevel3" />
+        <activity android:name=".challengelevel4" />
+        <activity android:name=".challengelevel5" />
+        <activity android:name=".challengelevel6" />
+        <activity android:name=".challengelevel7" />
+        <activity android:name=".challengelevel8" />
+        <activity android:name=".challengelevel9"></activity>
     </application>
 
 </manifest>
