@@ -19,7 +19,7 @@ public class ApplicationSettings {
         return mSharedPreferences.getString("Storage", "INTERNAL");
     }
 
-    // save the pereferences
+    // save the preferences
     public void setSharedPreferences(String storageType) {
         mSharedPreferences
                 .edit()
