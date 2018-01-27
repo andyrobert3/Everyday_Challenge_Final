@@ -43,7 +43,7 @@ public class Ultimate_Activity extends AppCompatActivity {
         ImageButton profileBtn = (ImageButton) findViewById(R.id.profileBtn);
 
         // Read username from Main Activity
-        String newString;
+        final String newString;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {
@@ -93,7 +93,17 @@ public class Ultimate_Activity extends AppCompatActivity {
 
         progressBtn.setOnClickListener(ocl);
 
+        View.OnClickListener callProfile = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profInt = new Intent(Ultimate_Activity.this, profile.class);
+                profInt.putExtra("USERNAME", newString);
+                startActivity(profInt);
+            }
+        };
+        // send intent to Ultimate Activity with name of user
 
+        profileBtn.setOnClickListener(callProfile);
 
     }
 
