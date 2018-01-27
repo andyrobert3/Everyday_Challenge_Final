@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +25,8 @@ public class Ultimate_Activity extends AppCompatActivity {
     private TextView usernameText;
     private Button changeChallengeBtn;
     private TextView currChallengeText;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +68,20 @@ public class Ultimate_Activity extends AppCompatActivity {
 
         usernameText.setText(newString);
         changeChallengeBtn.setOnClickListener(onClickListener);
+
+        Button progressBtn = (Button) findViewById(R.id.progressBtn);
+
+        View.OnClickListener ocl = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Ultimate_Activity.this, Progress_Activity.class);
+                startActivity(intent);
+            }
+        };
+        // send intent to Ultimate Activity with name of user
+
+        progressBtn.setOnClickListener(ocl);
+
     }
 
 }

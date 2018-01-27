@@ -40,4 +40,12 @@
     <string name="title_activity_challengelevel8">challengelevel8</string>
 
     <string name="title_activity_challengelevel9">challengelevel9</string>
+
+    <!-- Sidebar -->
+    <string-array name="sidebarMenu">
+        <item>Profile</item>
+        <item>Progress</item>
+        <item>Broadcast</item>
+        <item>Settings</item>
+    </string-array>
 </resources>
