@@ -24,12 +24,12 @@ public class Ultimate_Activity extends AppCompatActivity {
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {
-                newString= null;
+                newString = null;
             } else {
-                newString= extras.getString("USERNAME");
+                newString = extras.getString("USERNAME");
             }
         } else {
-            newString= (String) savedInstanceState.getSerializable("USERNAME");
+            newString = (String) savedInstanceState.getSerializable("USERNAME");
         }
         TextView usernameText = (TextView) findViewById(R.id.usernameText);
         usernameText.setText(newString);
