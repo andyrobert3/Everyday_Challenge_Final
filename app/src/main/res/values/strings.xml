@@ -20,4 +20,24 @@
     <string name="changeChallenge">Change Challenge</string>
 
     <string name="title_activity_level1">Level1Activity</string>
+
+    <string name="title_activity_challenge_level1">ChallengeLevel1</string>
+
+    <string name="title_activity_challengelevel2">challengelevel2</string>
+
+    <string name="title_activity_challengelevel3">challengelevel3</string>
+
+    <string name="title_activity_challengeweek4">challengeweek4</string>
+
+    <string name="title_activity_challengelevel5">challengelevel5</string>
+
+    <string name="title_activity_challengelevel4">challengelevel4</string>
+
+    <string name="title_activity_challengelevel6">challengelevel6</string>
+
+    <string name="title_activity_challengelevel7">challengelevel7</string>
+
+    <string name="title_activity_challengelevel8">challengelevel8</string>
+
+    <string name="title_activity_challengelevel9">challengelevel9</string>
 </resources>
