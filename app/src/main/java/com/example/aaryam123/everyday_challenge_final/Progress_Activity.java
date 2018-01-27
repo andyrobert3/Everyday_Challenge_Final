@@ -69,7 +69,7 @@ public class Progress_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 // Change activity
 
-                Intent intent = new Intent(Progress_Activity.this, ChallengeLevel1.class);
+                Intent intent = new Intent(Progress_Activity.this, challengelevel1.class);
                 startActivity(intent);
 
             }

@@ -28,11 +28,6 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".ChallengeLevel1"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_challenge_level1"
-            android:theme="@style/FullscreenTheme" />
-        <activity
             android:name=".challengelevel2"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_challengelevel2"
@@ -71,6 +66,11 @@
             android:name=".challengelevel9"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_challengelevel9"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".challengelevel1"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_challengelevel1"
             android:theme="@style/FullscreenTheme"></activity>
     </application>
 

@@ -48,4 +48,6 @@
         <item>Broadcast</item>
         <item>Settings</item>
     </string-array>
+
+    <string name="title_activity_challengelevel1">challengelevel1</string>
 </resources>
