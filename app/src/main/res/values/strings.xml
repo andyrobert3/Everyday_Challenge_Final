@@ -13,4 +13,6 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_progress_">Progress_Activity</string>
+    <string name="hello">Hello,</string>
+    <string name="changeChallenge">Change Challenge</string>
 </resources>
