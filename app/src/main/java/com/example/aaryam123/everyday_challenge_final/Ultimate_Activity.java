@@ -1,6 +1,7 @@
 package com.example.aaryam123.everyday_challenge_final;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -23,9 +24,9 @@ public class Ultimate_Activity extends AppCompatActivity {
     // set Views and their variables
     private TextView helloText;
     private TextView usernameText;
-    private Button changeChallengeBtn;
+    private ImageButton changeChallengeBtn;
     private TextView currChallengeText;
-    private Button finish;
+    private ImageButton finish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +34,13 @@ public class Ultimate_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_ultimate_);
 
         helloText = (TextView) findViewById(R.id.helloText);
-        changeChallengeBtn = (Button) findViewById(R.id.changeChallengeBtn);
+        changeChallengeBtn = (ImageButton) findViewById(R.id.changeChallengeBtn);
         currChallengeText = (TextView) findViewById(R.id.currChallengeText);
         usernameText = (TextView) findViewById(R.id.usernameText);
         finish = findViewById(R.id.finishBtn);
+
+        ImageButton settingsBtn = (ImageButton) findViewById(R.id.settingsBtn);
+        ImageButton profileBtn = (ImageButton) findViewById(R.id.profileBtn);
 
         // Read username from Main Activity
         String newString;
@@ -76,7 +80,7 @@ public class Ultimate_Activity extends AppCompatActivity {
         usernameText.setText(newString);
         changeChallengeBtn.setOnClickListener(onClickListener);
 
-        Button progressBtn = (Button) findViewById(R.id.progressBtn);
+        ImageButton progressBtn = (ImageButton) findViewById(R.id.progressBtn);
 
         View.OnClickListener ocl = new View.OnClickListener() {
             @Override
@@ -88,6 +92,7 @@ public class Ultimate_Activity extends AppCompatActivity {
         // send intent to Ultimate Activity with name of user
 
         progressBtn.setOnClickListener(ocl);
+
 
 
     }
