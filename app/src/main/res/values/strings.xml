@@ -18,4 +18,6 @@
     <string name="levels">Levels...</string>
     <string name="hello">Hello,</string>
     <string name="changeChallenge">Change Challenge</string>
+
+    <string name="title_activity_level1">Level1Activity</string>
 </resources>

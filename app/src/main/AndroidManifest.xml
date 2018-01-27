@@ -21,11 +21,12 @@
             android:label="@string/title_activity_ultimate_" />
         <activity
             android:name=".Progress_Activity"
-            android:label="@string/title_activity_progress_"></activity>
+            android:label="@string/title_activity_progress_" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
     </application>
 
 </manifest>
