@@ -1,6 +1,7 @@
 package com.example.aaryam123.everyday_challenge_final;
 
 import java.util.Random;
+import java.util.Stack;
 
 /**
  * Created by alexa on 1/27/2018.
@@ -20,7 +21,6 @@ public class ChallengeBook {
             "Open doors for strangers and smile",
             "Cut back TV and social media (Yes including this phone)"
     };
-
     private int challengesDone;
 
     ChallengeBook() {
@@ -32,6 +32,10 @@ public class ChallengeBook {
         Random randomGenerator = new Random();
         int randomNum = randomGenerator.nextInt(challenges.length);
         return challenges[randomNum];
+    }
+
+    public int getNumberChallenge() {
+        return challengesDone;
     }
 
 }
