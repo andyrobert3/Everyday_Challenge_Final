@@ -17,12 +17,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ProgessActivity"
-            android:label="@string/title_activity_progess"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".Ultimate_Activity"
-            android:label="@string/title_activity_ultimate_"></activity>
+            android:label="@string/title_activity_ultimate_" />
+        <activity
+            android:name=".Progress_Activity"
+            android:label="@string/title_activity_progress_"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
