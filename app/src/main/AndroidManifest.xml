@@ -35,7 +35,8 @@
         <activity android:name=".challengelevel6" />
         <activity android:name=".challengelevel7" />
         <activity android:name=".challengelevel8" />
-        <activity android:name=".challengelevel9"></activity>
+        <activity android:name=".challengelevel9" />
+        <activity android:name=".profile"></activity>
     </application>
 
 </manifest>
