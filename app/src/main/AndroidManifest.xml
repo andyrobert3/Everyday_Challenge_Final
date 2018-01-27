@@ -19,11 +19,10 @@
         <activity
             android:name=".ProgessActivity"
             android:label="@string/title_activity_progess"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".UltimateActivity"
-            android:label="UltimateActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:name=".Ultimate_Activity"
+            android:label="@string/title_activity_ultimate_"></activity>
     </application>
 
 </manifest>
