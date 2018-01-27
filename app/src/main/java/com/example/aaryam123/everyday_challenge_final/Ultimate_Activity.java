@@ -25,8 +25,7 @@ public class Ultimate_Activity extends AppCompatActivity {
     private TextView usernameText;
     private Button changeChallengeBtn;
     private TextView currChallengeText;
-
-
+    private Button finish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +36,7 @@ public class Ultimate_Activity extends AppCompatActivity {
         changeChallengeBtn = (Button) findViewById(R.id.changeChallengeBtn);
         currChallengeText = (TextView) findViewById(R.id.currChallengeText);
         usernameText = (TextView) findViewById(R.id.usernameText);
+        finish = findViewById(R.id.finishBtn);
 
         // Read username from Main Activity
         String newString;
@@ -66,6 +66,13 @@ public class Ultimate_Activity extends AppCompatActivity {
             }
         };
 
+        View.OnClickListener finishChallenge = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        };
+
         usernameText.setText(newString);
         changeChallengeBtn.setOnClickListener(onClickListener);
 
@@ -81,6 +88,7 @@ public class Ultimate_Activity extends AppCompatActivity {
         // send intent to Ultimate Activity with name of user
 
         progressBtn.setOnClickListener(ocl);
+
 
     }
 

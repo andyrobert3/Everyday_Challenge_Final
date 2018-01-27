@@ -68,14 +68,10 @@ public class Progress_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Change activity
-                if (levels.getCurrLevel() < 1) {
-                    Toast.makeText(Progress_Activity.this,
-                            "Sorry, your current level is not high enough. Complete more daily challenges",
-                            Toast.LENGTH_LONG).show();
-                } else {
-                    Intent intent = new Intent(Progress_Activity.this, ChallengeLevel1.class);
-                    startActivity(intent);
-                }
+
+                Intent intent = new Intent(Progress_Activity.this, ChallengeLevel1.class);
+                startActivity(intent);
+
             }
         };
 
