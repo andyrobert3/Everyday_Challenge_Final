@@ -14,7 +14,7 @@ public class Levels {
     private int doneActivites[] ={0};
 
     Levels () {
-        currLevel = 1;
+        currLevel = 9;
         maxLevel = 1;
     }
 
