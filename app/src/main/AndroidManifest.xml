@@ -71,7 +71,7 @@
             android:name=".challengelevel1"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_challengelevel1"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
     </application>
 
 </manifest>

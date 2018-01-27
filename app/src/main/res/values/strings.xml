@@ -50,4 +50,8 @@
     </string-array>
 
     <string name="title_activity_challengelevel1">challengelevel1</string>
+    <string name="fireworks">Fireworks</string>
+    <string name="you_re_on_your_first_step_to_being_a_challenge_guru">You\'re on your first step to being a challenge guru!</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="title_activity_challengelevel10">challengelevel10</string>
 </resources>

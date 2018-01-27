@@ -1,10 +1,12 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context="com.example.aaryam123.everyday_challenge_final.challengelevel1">
+    tools:context="com.example.aaryam123.everyday_challenge_final.challengelevel1"
+    tools:layout_editor_absoluteY="25dp">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -13,98 +15,78 @@
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/level1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="11dp"
-            android:ems="10"
-            android:fontFamily="@font/autour_one"
-            android:gravity="left"
-            android:inputType="textMultiLine"
-            android:text="Congratulations!"
-            android:textColor="@android:color/white"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="63dp" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:alpha="0.2"
+        android:contentDescription="@string/fireworks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/fireworks3" />
 
-        <EditText
-            android:id="@+id/level"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/level10"
-            android:layout_alignStart="@+id/level10"
-            android:layout_below="@+id/level1"
-            android:layout_marginTop="128dp"
-            android:ems="10"
-            android:fontFamily="@font/autour_one"
-            android:gravity="left"
-            android:inputType="textMultiLine"
-            android:text="You're on your first step to being a challenge guru!"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="63dp" />
+    <EditText
+        android:id="@+id/level1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:fontFamily="@font/autour_one"
+        android:inputType="textMultiLine"
+        android:text="Congratulations!"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-        <EditText
-            android:id="@+id/level10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView3"
-            android:layout_centerHorizontal="true"
-            android:ems="10"
-            android:fontFamily="@font/autour_one"
-            android:gravity="left"
-            android:inputType="textMultiLine"
-            android:text="Keep at it newbie! :D"
-            android:textColor="#f4e004"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="63dp" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fireworks" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:alpha="0.4"
-            app:srcCompat="@drawable/fireworks" />
+    <EditText
+        android:id="@+id/level10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="91dp"
+        android:ems="10"
+        android:fontFamily="@font/autour_one"
+        android:inputType="textMultiLine"
+        android:text="Keep at it newbie! :D"
+        android:textColor="#f4e004"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView3" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:alpha="0.3"
-            app:srcCompat="@drawable/fireworks2" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:alpha="0.3"
+        android:contentDescription="Firework"
+        app:layout_constraintBottom_toBottomOf="@+id/level10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/fireworks2" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:alpha="0.2"
-            app:srcCompat="@drawable/fireworks3" />
+    <EditText
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/autour_one"
+        android:inputType="textMultiLine"
+        android:text="You're on your first step to being a challenge guru!"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </RelativeLayout>
-
-</FrameLayout>
+</android.support.constraint.ConstraintLayout>
