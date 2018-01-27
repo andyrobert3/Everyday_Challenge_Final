@@ -1,6 +1,8 @@
 package com.example.aaryam123.everyday_challenge_final;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -43,7 +45,8 @@ public class Ultimate_Activity extends AppCompatActivity {
         ImageButton profileBtn = (ImageButton) findViewById(R.id.profileBtn);
 
         // Read username from Main Activity
-        final String newString;
+        final String newString = loadName();
+        /*
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {
@@ -53,7 +56,7 @@ public class Ultimate_Activity extends AppCompatActivity {
             }
         } else {
             newString = (String) savedInstanceState.getSerializable("USERNAME");
-        }
+        }*/
 
         currChallengeText.setText(challengeBook.getRandomChallenge());
 
@@ -107,4 +110,12 @@ public class Ultimate_Activity extends AppCompatActivity {
 
     }
 
+    // set nameField default
+    public String loadName() {
+        SharedPreferences sharedPreferences = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+
+        String name = sharedPreferences.getString("username","");
+
+        return name;
+    }
 }
