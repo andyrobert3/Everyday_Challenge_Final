@@ -19,7 +19,15 @@ public class ChallengeBook {
             "Ask that girl/guy out that you like",
             "Travel to somewhere random that is not known to you",
             "Open doors for strangers and smile",
-            "Cut back TV and social media (Yes including this phone)"
+            "Cut back TV and social media (Yes including this phone)",
+            "Eat a bowl of salad",
+            "Only drink water for the day",
+            "Start reading a book",
+            "Do 20 Push-ups",
+            "Try a vegan diet",
+            "Get 7 hours of sleep tonight",
+            "Say 'Hi!' to 5 strangers",
+            "Make your bed"
     };
     private int challengesDone;
 
