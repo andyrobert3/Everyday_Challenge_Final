@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Ultimate_Activity extends AppCompatActivity {
@@ -39,6 +40,10 @@ public class Ultimate_Activity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        TextView helloText = (TextView) findViewById(R.id.helloText);
+        TextView nameText = (TextView) findViewById(R.id.nameText);
+        Button changeChallengeBtn = (Button) findViewById(R.id.changeChallengeBtn);
     }
 
 }
