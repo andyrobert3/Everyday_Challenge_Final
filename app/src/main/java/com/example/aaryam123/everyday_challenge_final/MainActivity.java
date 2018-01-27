@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         saveNameButton = findViewById(R.id.saveName);
         name = findViewById(R.id.userName);
 
+        // send intent to Ultimate Activity with name of user
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {

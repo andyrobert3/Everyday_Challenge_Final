@@ -11,15 +11,26 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Ultimate_Activity extends AppCompatActivity {
+    // Create challenge book objects
+    private ChallengeBook challengeBook = new ChallengeBook();
+
+    // set Views and their variables
+    private TextView helloText;
+    private TextView usernameText;
+    private Button changeChallengeBtn;
+    private TextView currChallengeText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ultimate_);
 
-        TextView helloText = (TextView) findViewById(R.id.helloText);
+        helloText = (TextView) findViewById(R.id.helloText);
+        changeChallengeBtn = (Button) findViewById(R.id.changeChallengeBtn);
+        currChallengeText = (TextView) findViewById(R.id.currChallengeText);
+        usernameText = (TextView) findViewById(R.id.usernameText);
 
-
+        // Read username from Main Activity
         String newString;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
@@ -31,11 +42,9 @@ public class Ultimate_Activity extends AppCompatActivity {
         } else {
             newString = (String) savedInstanceState.getSerializable("USERNAME");
         }
-        TextView usernameText = (TextView) findViewById(R.id.usernameText);
-        usernameText.setText(newString);
 
-        Button changeChallengeBtn = (Button) findViewById(R.id.changeChallengeBtn);
-        TextView currChallengeText = (TextView) findViewById(R.id.currChallengeText);
+        usernameText.setText(newString);
+        currChallengeText.setText(challengeBook.getRandomChallenge());
     }
 
 }
