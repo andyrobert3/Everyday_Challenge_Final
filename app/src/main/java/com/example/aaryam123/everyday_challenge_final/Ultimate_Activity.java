@@ -18,8 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
 
 import java.util.Random;
 
@@ -37,6 +36,7 @@ public class Ultimate_Activity extends AppCompatActivity {
     private TextView currChallengeText;
     private ImageButton finish;
 
+    /*
     // Get a reference to your FirebaseDatabase
     FirebaseDatabase firebase = FirebaseDatabase.getInstance();
 
@@ -59,6 +59,7 @@ public class Ultimate_Activity extends AppCompatActivity {
 
     //DatabaseReference[] challengeArray = {messages, messages1, messages2, messages3, messages4, messages5, messages6, messages7,
       //      messages8 ,messages9, messages10, messages11, messages12, messages13};
+      */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,11 +113,13 @@ public class Ultimate_Activity extends AppCompatActivity {
             public void onClick(View view)   {
                 levels.doneChallenge();
                 saveLevel(levels.getCurrLevel());
+                Toast.makeText(Ultimate_Activity.this, "Challenge completed!", Toast.LENGTH_LONG).show();
             }
         };
 
         usernameText.setText(newString);
         changeChallengeBtn.setOnClickListener(onClickListener);
+        finish.setOnClickListener(finishChallenge);
 
         ImageButton progressBtn = (ImageButton) findViewById(R.id.progressBtn);
 
@@ -154,7 +157,7 @@ public class Ultimate_Activity extends AppCompatActivity {
         return name;
     }
 
-    // method to push all messages to firebase
+    /* method to push all messages to firebase
     private void pushAllChallengesToFirebase() {
         // hard coding the messages to database
         messages.setValue("Eat less sugar today");
@@ -173,6 +176,7 @@ public class Ultimate_Activity extends AppCompatActivity {
         messages13.setValue("Travel to somewhere random that is not known to you");
 
     }
+    */
 
     public void saveLevel(int level) {
         SharedPreferences sharedPreferences = getSharedPreferences("level", Context.MODE_PRIVATE);

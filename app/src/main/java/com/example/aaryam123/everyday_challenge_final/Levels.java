@@ -11,7 +11,7 @@ public class Levels {
      // personal max level
     // set number of challenges for levelChallenges array
     private int levelChallenges[] = {4,5,6,7,8,9,10,11,12};
-    private int doneActivites[] ={0,0,0,0,0,0,0,0,0};
+    private int doneActivites[] = {0,0,0,0,0,0,0,0,0};
 
     Levels (int level) {
         currLevel = level;
