@@ -28,6 +28,7 @@ public class Progress_Activity extends AppCompatActivity {
     private ImageButton mLevel7;
     private ImageButton mLevel8;
     private ImageButton mLevel9;
+    private ImageButton locationFind;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -54,7 +55,7 @@ public class Progress_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_);
 
-        levels = new Levels(loadLevel());
+        levels = new Levels(loadLevel(), loadNumChallenges());
 
         mLevel1 = findViewById(R.id.level1);
         mLevel2 = findViewById(R.id.level2);
@@ -65,6 +66,7 @@ public class Progress_Activity extends AppCompatActivity {
         mLevel7 = findViewById(R.id.level7);
         mLevel8 = findViewById(R.id.level8);
         mLevel9 = findViewById(R.id.level9);
+
 
         mTextMessage = (TextView) findViewById(R.id.message);
 
@@ -226,6 +228,20 @@ public class Progress_Activity extends AppCompatActivity {
         int level = sharedPreferences.getInt("currLevel",1);
 
         return level;
+    }
+
+    public void saveNumChallenges(int challenges) {
+        SharedPreferences sharedPreferences = getSharedPreferences("challenges", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("numChallenges", challenges);
+        editor.commit();
+    }
+
+    public int loadNumChallenges() {
+        SharedPreferences sharedPreferences = getSharedPreferences("challenges", Context.MODE_PRIVATE);
+        int numChallenges = sharedPreferences.getInt("numChallenges",1);
+
+        return numChallenges;
     }
 
 }

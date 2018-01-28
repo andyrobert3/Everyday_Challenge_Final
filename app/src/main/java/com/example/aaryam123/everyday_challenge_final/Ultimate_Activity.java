@@ -65,7 +65,7 @@ public class Ultimate_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ultimate_);
-        levels = new Levels(loadLevel());
+        levels = new Levels(loadLevel(), loadNumChallenges());
 
         //pushAllChallengesToFirebase();
 
@@ -112,6 +112,7 @@ public class Ultimate_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view)   {
                 levels.doneChallenge();
+                saveNumChallenges(levels.getNumChallenges());
                 saveLevel(levels.getCurrLevel());
                 Toast.makeText(Ultimate_Activity.this, "Challenge completed!", Toast.LENGTH_LONG).show();
             }
@@ -192,6 +193,20 @@ public class Ultimate_Activity extends AppCompatActivity {
         int level = sharedPreferences.getInt("currLevel",1);
 
         return level;
+    }
+
+    public void saveNumChallenges(int challenges) {
+        SharedPreferences sharedPreferences = getSharedPreferences("challenges", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("numChallenges", challenges);
+        editor.commit();
+    }
+
+    public int loadNumChallenges() {
+        SharedPreferences sharedPreferences = getSharedPreferences("challenges", Context.MODE_PRIVATE);
+        int numChallenges = sharedPreferences.getInt("numChallenges",1);
+
+        return numChallenges;
     }
 
 
