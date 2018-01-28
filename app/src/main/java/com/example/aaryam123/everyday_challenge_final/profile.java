@@ -1,6 +1,8 @@
 package com.example.aaryam123.everyday_challenge_final;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.location.Geocoder;
@@ -23,7 +25,7 @@ import java.util.Locale;
 
 public class profile extends AppCompatActivity {
 
-
+    private Levels levels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,18 +47,10 @@ public class profile extends AppCompatActivity {
         ImageView image7 = (ImageView) findViewById(R.id.imageView7);
         ImageView image8 = (ImageView) findViewById(R.id.imageView8);
         ImageView image9 = (ImageView) findViewById(R.id.imageView9);
+        TextView completeText = findViewById(R.id.completeText);
 
-        final String nameInput;
-        if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if(extras == null) {
-                nameInput = null;
-            } else {
-                nameInput = extras.getString("USERNAME");
-            }
-        } else {
-            nameInput = (String) savedInstanceState.getSerializable("USERNAME");
-        }
+        final String nameInput = loadName();
+        levels = new Levels(loadLevel(), loadNumChallenges());
 
         profNameText.setText(nameInput);
 
@@ -87,6 +81,16 @@ public class profile extends AppCompatActivity {
 
         facebookBtn.setOnClickListener(oclFb);
 
+        View.OnClickListener openMaps = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(profile.this, MapsActivity.class);
+                startActivity(i);
+            }
+        };
+
+        locationBtn.setOnClickListener(openMaps);
+
 
         View.OnClickListener oclWa = new View.OnClickListener() {
             @Override
@@ -108,5 +112,30 @@ public class profile extends AppCompatActivity {
 
         whatsappBtn.setOnClickListener(oclWa);
 
+        challengeText.setText("You have completed" + levels.getNumChallenges());
+        levelText.setText("You are now at level" + levels.getCurrLevel());
+
+    }
+    // set nameField default
+    public String loadName() {
+        SharedPreferences sharedPreferences = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+
+        String name = sharedPreferences.getString("username","");
+
+        return name;
+    }
+
+    public int loadNumChallenges() {
+        SharedPreferences sharedPreferences = getSharedPreferences("challenges", Context.MODE_PRIVATE);
+        int numChallenges = sharedPreferences.getInt("numChallenges",1);
+
+        return numChallenges;
+    }
+
+    public int loadLevel() {
+        SharedPreferences sharedPreferences = getSharedPreferences("level", Context.MODE_PRIVATE);
+        int level = sharedPreferences.getInt("currLevel",1);
+
+        return level;
     }
 }
