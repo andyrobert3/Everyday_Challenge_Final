@@ -71,7 +71,7 @@ public class profile extends AppCompatActivity {
         View.OnClickListener oclFb = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri webpage = Uri.parse("http://www.facebook.com");
+                Uri webpage = Uri.parse("http:/m.facebook.com");
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
 
                 // Verify it resolves
@@ -86,6 +86,27 @@ public class profile extends AppCompatActivity {
         };
 
         facebookBtn.setOnClickListener(oclFb);
+
+
+        View.OnClickListener oclWa = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sendIntent = new Intent();
+                sendIntent.setPackage("com.whatsapp");
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "I have completed the daily challenge!");
+                sendIntent.setType("text/plain");
+                PackageManager packageManager = getPackageManager();
+                List<ResolveInfo> activities = packageManager.queryIntentActivities(sendIntent, 0);
+                boolean isIntentSafe = activities.size() > 0;
+
+                if (isIntentSafe) {
+                    startActivity(sendIntent);
+                }
+            }
+        };
+
+        whatsappBtn.setOnClickListener(oclWa);
 
     }
 }
