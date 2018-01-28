@@ -19,15 +19,12 @@ import java.util.logging.Level;
 public class Progress_Activity extends AppCompatActivity {
     private Levels levels;
     private TextView mTextMessage;
-    private ImageButton mLevel1;
     private ImageButton mLevel2;
     private ImageButton mLevel3;
     private ImageButton mLevel4;
     private ImageButton mLevel5;
     private ImageButton mLevel6;
-    private ImageButton mLevel7;
     private ImageButton mLevel8;
-    private ImageButton mLevel9;
     private ImageButton locationFind;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -57,15 +54,15 @@ public class Progress_Activity extends AppCompatActivity {
 
         levels = new Levels(loadLevel(), loadNumChallenges());
 
-        mLevel1 = findViewById(R.id.level1);
+        ImageButton mLevel1 = findViewById(R.id.level1);
         mLevel2 = findViewById(R.id.level2);
         mLevel3 = findViewById(R.id.level3);
         mLevel4 = findViewById(R.id.level4);
         mLevel5 = findViewById(R.id.level5);
         mLevel6 = findViewById(R.id.level6);
-        mLevel7 = findViewById(R.id.level7);
+        ImageButton mLevel7 = findViewById(R.id.level7);
         mLevel8 = findViewById(R.id.level8);
-        mLevel9 = findViewById(R.id.level9);
+        ImageButton mLevel9 = findViewById(R.id.level9);
 
 
         mTextMessage = (TextView) findViewById(R.id.message);

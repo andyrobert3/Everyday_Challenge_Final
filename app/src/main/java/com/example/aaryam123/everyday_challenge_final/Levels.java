@@ -6,13 +6,12 @@ package com.example.aaryam123.everyday_challenge_final;
 
 public class Levels {
     public final static int TOTAL_LEVELS = 9;
-
-    private int currLevel;
-    private int mNumChallenges;
+    int currLevel;
+    int mNumChallenges;
      // personal max level
     // set number of challenges for levelChallenges array
-    private int levelChallenges[] = {4,5,6,7,8,9,10,11,12};
-    private int doneActivites[] = {0,0,0,0,0,0,0,0,0};
+    int levelChallenges[] = {4,5,6,7,8,9,10,11,12};
+    int doneActivites[] ={0, 0, 0, 0, 0, 0 ,0 ,0 ,0};
 
     Levels (int level, int numChallenges) {
         currLevel = level;
@@ -39,5 +38,6 @@ public class Levels {
     public int getNumChallenges() {
         return mNumChallenges;
     }
+
 
 }

@@ -114,6 +114,7 @@ public class Ultimate_Activity extends AppCompatActivity {
                 levels.doneChallenge();
                 saveNumChallenges(levels.getNumChallenges());
                 saveLevel(levels.getCurrLevel());
+
                 Toast.makeText(Ultimate_Activity.this, "Challenge completed!", Toast.LENGTH_LONG).show();
             }
         };
@@ -184,7 +185,7 @@ public class Ultimate_Activity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("currLevel", level);
         editor.commit();
-
+        currChallengeText.setText(challengeBook.getRandomChallenge());
         Toast.makeText(this, "Challenge Completed!", Toast.LENGTH_LONG).show();
     }
 

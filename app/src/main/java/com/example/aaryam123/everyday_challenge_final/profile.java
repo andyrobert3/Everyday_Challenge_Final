@@ -98,7 +98,7 @@ public class profile extends AppCompatActivity {
                 Intent sendIntent = new Intent();
                 sendIntent.setPackage("com.whatsapp");
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "I have completed the daily challenge!");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "I have completed the daily challenge! Come use the Everyday Challenge App!");
                 sendIntent.setType("text/plain");
                 PackageManager packageManager = getPackageManager();
                 List<ResolveInfo> activities = packageManager.queryIntentActivities(sendIntent, 0);
@@ -138,4 +138,6 @@ public class profile extends AppCompatActivity {
 
         return level;
     }
+
+
 }
