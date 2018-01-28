@@ -42,12 +42,12 @@ public class profile extends AppCompatActivity {
         TextView profNameText = (TextView) findViewById(R.id.profNameText);
         TextView statsText = (TextView) findViewById(R.id.statsText);
         TextView levelText = (TextView) findViewById(R.id.levelText);
+        TextView completeText = (TextView)findViewById(R.id.completeText);
         ImageButton locationBtn = (ImageButton) findViewById(R.id.locationBtn);
         ImageView image6 = (ImageView) findViewById(R.id.imageView6);
         ImageView image7 = (ImageView) findViewById(R.id.imageView7);
         ImageView image8 = (ImageView) findViewById(R.id.imageView8);
         ImageView image9 = (ImageView) findViewById(R.id.imageView9);
-        TextView completeText = findViewById(R.id.completeText);
 
         final String nameInput = loadName();
         levels = new Levels(loadLevel(), loadNumChallenges());
@@ -112,7 +112,7 @@ public class profile extends AppCompatActivity {
 
         whatsappBtn.setOnClickListener(oclWa);
 
-        challengeText.setText("You have completed " + levels.getNumChallenges() + " challenges");
+        completeText.setText("You have completed " + levels.getNumChallenges() + " challenges");
         levelText.setText("You are now at level " + levels.getCurrLevel());
 
     }
