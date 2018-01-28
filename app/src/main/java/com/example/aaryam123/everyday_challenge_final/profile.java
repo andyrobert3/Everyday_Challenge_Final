@@ -1,11 +1,14 @@
 package com.example.aaryam123.everyday_challenge_final;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.media.Image;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.List;
 import java.util.Locale;
 
 public class profile extends AppCompatActivity {
@@ -55,6 +59,33 @@ public class profile extends AppCompatActivity {
         }
 
         profNameText.setText(nameInput);
+
+        Uri webpage = Uri.parse("http://www.facebook.com");
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+
+        // Verify it resolves
+        PackageManager packageManager = getPackageManager();
+        List<ResolveInfo> activities = packageManager.queryIntentActivities(webIntent, 0);
+        boolean isIntentSafe = activities.size() > 0;
+
+        View.OnClickListener oclFb = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri webpage = Uri.parse("http://www.facebook.com");
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+
+                // Verify it resolves
+                PackageManager packageManager = getPackageManager();
+                List<ResolveInfo> activities = packageManager.queryIntentActivities(webIntent, 0);
+                boolean isIntentSafe = activities.size() > 0;
+
+                if (isIntentSafe) {
+                    startActivity(webIntent);
+                }
+            }
+        };
+
+        facebookBtn.setOnClickListener(oclFb);
 
     }
 }
