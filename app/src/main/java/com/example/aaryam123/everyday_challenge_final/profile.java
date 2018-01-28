@@ -112,8 +112,8 @@ public class profile extends AppCompatActivity {
 
         whatsappBtn.setOnClickListener(oclWa);
 
-        challengeText.setText("You have completed" + levels.getNumChallenges());
-        levelText.setText("You are now at level" + levels.getCurrLevel());
+        challengeText.setText("You have completed " + levels.getNumChallenges() + " challenges");
+        levelText.setText("You are now at level " + levels.getCurrLevel());
 
     }
     // set nameField default
